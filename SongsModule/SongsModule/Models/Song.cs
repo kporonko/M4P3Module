@@ -12,9 +12,9 @@ namespace SongsModule.Models
         public string Title { get; set; } = null!;
         public string Duration { get; set; } = null!;
         public DateTime ReleasedDate { get; set; }
-        public Genre? Genre { get; set; }
+        public virtual Genre? Genre { get; set; }
         public int? GenreId { get; set; }
-        public Artist? Artist { get; set; }
+        public virtual Artist? Artist { get; set; }
         public int? ArtistId { get; set; }
     }
 }
