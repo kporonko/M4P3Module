@@ -11,7 +11,7 @@ namespace SongsModule.Data
     {
         public SongsModuleContext CreateDbContext(string[] args)
         {
-            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=OfficeDb;Integrated Security=True;MultipleActiveResultSets=true";
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Module;Integrated Security=True;MultipleActiveResultSets=true";
             var optionsBuilder = new DbContextOptionsBuilder<SongsModuleContext>();
             var options = optionsBuilder
                 .UseLazyLoadingProxies()
