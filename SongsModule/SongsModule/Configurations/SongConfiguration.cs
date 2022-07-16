@@ -43,6 +43,14 @@ namespace SongsModule.Configurations
                 .Property(p => p.GenreId)
                 .HasColumnName("GenreId")
                 .HasColumnType("int");
+
+            builder.HasData(new Song[] {
+                new Song { SongId = 1, Title = "Song 1", Duration = "3.43", GenreId = 1, ArtistId = 1},
+                new Song { SongId = 2, Title = "Song 2", Duration = "4.23", GenreId = 2, ArtistId = 2},
+                new Song { SongId = 3, Title = "Song 3", Duration = "3.23", GenreId = 3, ArtistId = 3},
+                new Song { SongId = 4, Title = "Song 4", Duration = "5.12", GenreId = 4, ArtistId = 4}
+                }
+           );
         }
     }
 }

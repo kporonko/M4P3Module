@@ -27,6 +27,14 @@ namespace SongsModule.Configurations
                 .HasColumnName("Title")
                 .HasColumnType("varchar")
                 .HasMaxLength(50);
+
+            builder.HasData(new Genre[] {
+                new Genre { GenreId = 1, Title = "Rock"},
+                new Genre { GenreId = 2, Title = "Metal"},
+                new Genre { GenreId = 3, Title = "Pop"},
+                new Genre { GenreId = 4, Title = "Rock"}
+                }
+            );
         }
     }
 }

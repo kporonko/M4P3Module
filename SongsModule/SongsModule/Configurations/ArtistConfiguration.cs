@@ -53,6 +53,13 @@ namespace SongsModule.Configurations
                 .HasColumnType("varchar")
                 .HasMaxLength(50);
 
+            builder.HasData(new Artist[] {
+                new Artist { ArtistId = 1, DateOfBirth = new DateTime(2000, 12, 12), Name = "Vasya"},
+                new Artist { ArtistId = 2, DateOfBirth = new DateTime(1999, 4, 26), Name = "Oleg"},
+                new Artist { ArtistId = 3, DateOfBirth = new DateTime(1989, 3, 3), Name = "Vova"},
+                new Artist { ArtistId = 4, DateOfBirth = new DateTime(1965, 6, 23), Name = "Artem"}
+                }
+            );
         }
     }
 }

@@ -21,10 +21,9 @@ namespace SongsModule.Data
         {
             modelBuilder.ApplyConfiguration(new ArtistConfiguration());
             modelBuilder.ApplyConfiguration(new GenreConfiguration());
-            modelBuilder.ApplyConfiguration(new SongConfiguration());
-
             modelBuilder.Entity<Song>().HasOne(t => t.Genre).WithMany(t => t.Songs);
             modelBuilder.Entity<Song>().HasOne(t => t.Artist).WithMany(t => t.Songs);
+            modelBuilder.ApplyConfiguration(new SongConfiguration());
         }
     }
 }
